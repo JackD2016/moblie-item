@@ -1,0 +1,219 @@
+html{
+  width: 100%;
+  font-size: 26/@rem;
+}
+body{
+  font-family: "Microsoft YaHei" , "sans-serif";
+  margin: 0;
+  position: relative;
+  padding: 0;
+  font-size: 26/@rem;
+  background: #ffffff;
+  color: #333;
+  width: 100%;
+}
+/*添加浮动*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*去除公共样式*/
+a{
+  text-decoration:none;
+  color:  #3c3c3c;
+}
+input,textarea{
+  border:0;
+  outline: none;
+  resize: none;
+  margin: 0;
+  padding: 0;
+  /*清楚ios浏览器默认的样式*/
+  -webkit-appearance: none;
+}
+
+img{
+  vertical-align: middle;/*清除3px的bug*/
+  border: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*清除浮动*/
+.clearfix::after,
+.clearfix::before{
+  clear: both;
+  content: '.';
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  display: block;
+}
+/*定义缩放比例*/
+
+@rem:46.875rem;
+
+
+[class^="icon_"]{
+  background: url("../image/sprites.png") no-repeat;
+  background-size: 400/@rem 400/@rem;
+}
+
+/*头部*/
+.jd_topBar{
+  height: 90/@rem;
+  width: 100%;
+  background: url("../image/header-bg.png") repeat-x;
+  background-size: 1px 88/@rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  .icon_back{
+    height: 44/@rem;
+    width: 40/@rem;
+    background-position: -40/@rem 0;
+    display: block;
+    padding: 24/@rem 20/@rem;
+    background-clip: content-box;
+    background-origin: content-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .icon_menu{
+    height: 40/@rem;
+    width:  40/@rem;
+    background-position: -120/@rem 0;
+    display: block;
+    margin: 24/@rem 20/@rem;
+    background-clip: content-box;
+    background-origin: content-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  form{
+    width: 100%;
+    height: 88/@rem;
+    padding: 0 80/@rem;
+    box-sizing: border-box;
+    input{
+      width: 100%;
+      height: 64/@rem;
+      border: 1px solid #bfbfbf;
+      padding: 0 16/@rem;
+      border-radius: 32/@rem;
+      margin-top: 14/@rem;
+      font-family: sans-serif;
+      font-size: 24/@rem;
+    }
+  }
+  h2{
+    width: 100%;
+    height: 88/@rem;
+    line-height: 84/@rem;
+    font-size: 32/@rem;
+    font-family: sans-serif;
+    color: #000;
+    font-weight: inherit;
+    text-align: center;
+  }
+}
+/*分类大区块*/
+.jd_category{
+  padding-top: 90/@rem;/*头部的高度是45px*/
+  height: 100%;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  .jd_catLeft{
+    width: 180/@rem;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 90/@rem;
+    z-index: 999;
+    /*子盒子  滑动*/
+    box-sizing: border-box;
+    ul{
+      -webkit-transition: all .3s ease 0s;
+      transition: all .3s ease 0s;
+      li{
+        height: 100/@rem;
+        width: 100/@rem;
+        border-bottom: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        line-height: 98/@rem;
+        text-align: center;
+        background: #f3f4f6;
+        a{
+          color: #000;
+          font-family: sans-serif;
+          font-size: 24/@rem;
+          display: block;
+        }
+      }
+      .now{
+        border-right: 0;
+        background-color: #fff;
+        a{
+          color: #d8505c;
+        }
+      }
+    }
+  }
+
+  /*右分类*/
+  .jd_catRight{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding-left:90px;
+    overflow: hidden;
+    box-sizing: border-box;
+    .jd_catRight_con{
+      padding: 20/@rem 24/@rem;
+      .banner{
+        width: 100%;
+        img{
+          width: 100%;
+        }
+      }
+      .catType{
+        font-size: 24/@rem;
+        font-family: sans-serif;
+        margin-top: 20/@rem;
+        h3{
+          line-height: 40/@rem;
+          font-size: 24/@rem;
+          color: #888;
+        }
+        ul{
+          li{
+            width: 33.33%;
+            text-align: center;
+            float: left;
+            margin-top: 20/@rem;
+            img{
+              height: 124/@rem;
+            }
+            p{
+              line-height: 40/@rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+

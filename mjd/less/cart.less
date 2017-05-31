@@ -1,0 +1,459 @@
+html{
+  width: 100%;
+  font-size: 26/@rem;
+  height: 100%;
+
+}
+body{
+  font-family: "Microsoft YaHei" , "sans-serif";
+  margin: 0;
+  position: relative;
+  padding: 0;
+  font-size: 26/@rem;
+  background: #ffffff;
+  color: #333;
+  width: 100%;
+}
+body,p,h1,h2,h3,ul,li{
+  margin: 0;
+  padding: 0;
+}
+
+/*添加浮动*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*去除公共样式*/
+a{
+  text-decoration:none;
+  color:  #3c3c3c;
+}
+
+
+input,textarea{
+  border:0;
+  outline: none;
+  resize: none;
+  margin: 0;
+  padding: 0;
+  /*清楚ios浏览器默认的样式*/
+  -webkit-appearance: none;
+}
+
+img{
+  vertical-align: middle;/*清除3px的bug*/
+  border: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*清除浮动*/
+.clearfix::after,
+.clearfix::before{
+  clear: both;
+  content: '.';
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  display: block;
+}
+/*定义缩放比例*/
+
+@rem:46.875rem;
+
+/*header*/
+[class^="icon_"]{
+  background: url("../image/sprites.png") no-repeat;
+  background-size: 400/@rem 400/@rem;
+}
+
+/*头部*/
+.jd_topBar{
+  height: 90/@rem;
+  width: 100%;
+  background: url("../image/header-bg.png") repeat-x;
+  background-size: 1px 88/@rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  .icon_back{
+    height: 44/@rem;
+    width: 40/@rem;
+    background-position: -40/@rem 0;
+    display: block;
+    padding: 24/@rem 20/@rem;
+    background-clip: content-box;
+    background-origin: content-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .icon_menu{
+    height: 40/@rem;
+    width:  40/@rem;
+    background-position: -120/@rem 0;
+    display: block;
+    margin: 24/@rem 20/@rem;
+    background-clip: content-box;
+    background-origin: content-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  form{
+    width: 100%;
+    height: 88/@rem;
+    padding: 0 80/@rem;
+    box-sizing: border-box;
+    input{
+      width: 100%;
+      height: 64/@rem;
+      border: 1px solid #bfbfbf;
+      padding: 0 16/@rem;
+      border-radius: 32/@rem;
+      margin-top: 14/@rem;
+      font-family: sans-serif;
+      font-size: 24/@rem;
+    }
+  }
+  h2{
+    width: 100%;
+    height: 88/@rem;
+    line-height: 88/@rem;
+    font-size: 32/@rem;
+    font-family: sans-serif;
+    color: #000;
+    font-weight: inherit;
+    text-align: center;
+  }
+}
+
+/*安全提示*/
+.jd_safeTip{
+  width: 100%;
+  height: 68/@rem;
+  line-height: 68/@rem;
+  font-size: 26/@rem;
+  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  top:90/@rem;
+  left: 0;
+  p{
+    padding-left: 50/@rem;
+    width: 480/@rem;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    &::before{
+      content: "";
+      display: block;
+      width: 36/@rem;
+      height: 36/@rem;
+      background: url("../image/safe_icon.png") no-repeat;
+      background-size: 36/@rem 36/@rem;
+      position: absolute;
+      left: 0;
+      top: 16/@rem;
+      box-sizing: border-box;
+    }
+  }
+}
+
+/*公用复选框*/
+.jd_check_box{
+  height: 40/@rem;
+  width: 40/@rem;
+  display: block;
+  background: url("../image/shop-icon.png") no-repeat;
+  background-size: 100/@rem 200/@rem;
+  background-position: 0 0;
+
+}
+.jd_check_box[checked]{
+  background-position: -50/@rem 0;
+}
+
+/*店铺tit*/
+.jd_shop{
+  margin-top: 20/@rem;
+  background: #fff;
+  .jd_shop_tit{
+    height: 72/@rem;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    .tit_check {
+      width: 80/@rem;
+      height: 70/@rem;
+      position: absolute;
+      .jd_check_box{
+        position: absolute;
+        top: 14/@rem;
+        left: 20/@rem;
+      }
+    }
+    .tit_name{
+      padding-left: 80/@rem;
+      font-size: 24/@rem;
+      .imgLogo{
+        width: 30/@rem;
+        height: 26/@rem;
+        display: block;
+        float: left;
+        margin-top: 20/@rem;
+      }
+      .name{
+        float: left;
+        font-size: 26/@rem;
+        margin-top: 16/@rem;
+        margin-left: 8/@rem;
+      }
+      .tip{
+        float: right;
+        color: #d8505c;
+        margin-right: 20/@rem;
+        margin-top: 16/@rem;
+      }
+    }
+  }
+  /*店铺*/
+  .jd_shop_con{
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    .con_check{
+      position: absolute;
+      width: 80/@rem;
+      top: 0;
+      left: 0;
+      .jd_check_box{
+        position: absolute;
+        top: 40/@rem;
+        left: 20/@rem;
+      }
+    }
+    /*商品大盒子*/
+    .con_product{
+      margin-top: 20/@rem;
+      padding-left: 80/@rem;
+      padding-right: 20/@rem;
+      padding-bottom: 20/@rem;
+      /*商品图片*/
+      .con_product_img{
+        float:left;
+        width: 160/@rem;
+        height: 160/@rem;
+        margin-right: 20/@rem;
+        display: block;
+        position: absolute;
+        img{
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+      /*商品信息盒子*/
+      .con_product_box{
+        padding-left: 180/@rem;
+        /*名字*/
+        .name{
+          height: 60/@rem;
+          line-height: 30/@rem;
+          font-size: 26/@rem;
+          overflow: hidden;
+          display: block;
+        }
+        /*价格*/
+        .price{
+          margin-top: 10/@rem;
+        }
+        /*操作盒子*/
+        .option{
+          width: 100%;
+          height: 48/@rem;
+          margin-top: 10/@rem;
+          /*改变数量盒子*/
+          .change_box{
+            float: left;
+          }
+          .change_box_left{
+            width: 64/@rem;
+            height: 48/@rem;
+            border: 1px solid #e0e0e0;
+            border-top-left-radius: 4/@rem;
+            border-bottom-left-radius: 4/@rem;
+            display: block;
+            float: left;
+            text-align: center;
+          }
+          input{
+            width: 64/@rem;
+            height: 48/@rem;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            float: left;
+          }
+          .change_box_right{
+            width: 64/@rem;
+            height: 48/@rem;
+            border: 1px solid #e0e0e0;
+            border-top-right-radius: 4/@rem;
+            border-bottom-right-radius: 4/@rem;
+            display: block;
+            float: left;
+            text-align: center;
+          }
+          .delete_box{
+            float: right;
+            /*删除盒子上*/
+            .delete_box_top{
+              width: 40/@rem;
+              height: 10/@rem;
+              background: url("../image/delete_up.png") no-repeat;
+              background-size: 40/@rem 10/@rem;
+              margin-left: -1px;
+            }
+            /*删除盒子下*/
+            .delete_box_bot{
+              width: 36/@rem;
+              height: 36/@rem;
+              background: url("../image/delete_down.png") no-repeat;
+              background-size: 36/@rem 36/@rem;
+              margin-top: -6/@rem;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/*金额操作*/
+.jd_amount{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height:124/@rem;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  /*金额操作的盒子*/
+  .amount_check{
+    position: absolute;
+    width: 160/@rem;
+    line-height: 124/@rem;
+    .jd_check_box{
+      position: absolute;
+      top:40/@rem;
+      left: 20/@rem;
+    }
+    /*全选*/
+    span{
+      padding-left: 70/@rem;
+      color: #fff;
+    }
+  }
+  /*金额信息*/
+  .amount_info{
+    padding-left: 140/@rem;
+    padding-right: 160/@rem;
+    height: 124/@rem;
+    color: #fff;
+    /*金额信息*/
+    .sum{
+      font-size: 32/@rem;
+      margin-top: 30/@rem;
+    }
+    /*金额信息*/
+    .other{
+      font-size: 20/@rem;
+      margin-top: 10/@rem;
+    }
+  }
+  /*结算按钮*/
+  .amount_submit{
+    height: 124/@rem;
+    width: 240/@rem;
+    padding: 0 4/@rem;
+    text-align: center;
+    line-height: 124/@rem;
+    color: #fff;
+    background: #d8505c;
+    font-size: 36/@rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*结算按钮数量*/
+    span{
+      font-size: 24/@rem;
+    }
+  }
+}
+
+/*弹出层*/
+.jd_win{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1001;
+  .jd_win_box{
+    width: 85%;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8/@rem;
+    margin: 0  auto;
+    padding:0 5%;
+    .jd_win_box_text{
+      line-height: 150/@rem;
+      color: #666;
+      text-align: center;
+      font-size: 32/@rem;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 20/@rem;
+    }
+    .jd_btn_box{
+      font-size: 30/@rem;
+      margin-bottom: 20/@rem;
+      .cancel{
+        width: 45%;
+        height:72/@rem;
+        float: left;
+        margin-right: 10%;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8/@rem;
+        color: #888;
+        text-align: center;
+        line-height: 72/@rem;
+      }
+      .submit{
+        width: 45%;
+        height:72/@rem;
+        float: left;
+        background: #d8505c;
+        border-radius: 8/@rem;
+        color: #fff;
+        text-align: center;
+        line-height: 72/@rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

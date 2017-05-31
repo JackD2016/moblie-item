@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script>
+			//获取像素比
+			var pixelRatio = 1 / window.devicePixelRatio;
+			//通过js动态设置视口(viewport)
+			document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'" />');	
+			// 获取html节点
+			var html = document.getElementsByTagName('html')[0];
+			// 获取屏幕宽度
+			var pageWidth = html.getBoundingClientRect().width;
+			// 屏幕宽度 / 固定数值 = 基准值
+			html.style.fontSize = pageWidth / 16 + "px";
+		</script>
+		<script src="js/index.js"></script>
+</head>
+<body>
+<div class="container">
+	<!--头部搜索区域-->
+	    <header class="jd_header">
+            <div class="jd_header_box">
+                <form action="#" class="fl">
+                    <i class="icon_logo fl"></i>
+                    <i class="icon_search fl"></i>
+                    <input class="fl" type="search" placeholder="搜索"/>
+                </form>
+                <a href="#" class="login fr">登录</a>
+            </div>
+        </header>
+		<!--广告导航-->
+        <div class="jd_banner">
+			<ul>
+				<li><a href="#"><img src="image/l1.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/l2.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/l3.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/l4.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/l5.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/l6.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/l7.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/l8.jpg" alt=""></a></li>
+			</ul>
+			<div>
+				<span class="active"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+        </div>
+	    <!--产品导航-->
+        <div class="goodslist">
+        	<ul>
+        		<li><a href=""><img src="image/list1.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list2.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list3.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list4.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list5.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list6.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list7.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list8.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list9.png" alt=""><span>京东超市</span></a></li>
+        		<li><a href=""><img src="image/list10.png" alt=""><span>京东超市</span></a></li>
+        	</ul>
+        </div>
+		<!--京东快报-->
+		<div class="jd_new">
+			<div class="jd_new_content">
+			<img class="fl" src="image/jd-news-tit.png" alt="">
+			<div class="text_mul fl">
+				<ul>
+					<marquee direction="up" truespeed="truespeed" height="60px" behavior="scroll">
+					<li><a href="">全金属机身手机，感受不一样的手感</a></li>
+					<li><a href="">施华洛世奇官方旗舰店盛大开业</a></li>
+					<li><a href="">全金属机身手机，感受不一样的手感</a></li>
+					<li><a href="">施华洛世奇官方旗舰店身手机</a></li>
+					</marquee>
+				</ul>
+			</div>
+			<span class="more fr">更多</span>
+		</div>
+		</div>
+		<!--京东秒杀-->
+	    <div class="jd_ms">
+			<div class="ms_title">
+				<div class="tit_left fl">
+					<img class="tit_img fl" src="image/57fdff2eNb7cd186f.png" alt="">
+					<span class="fl">14点场</span>
+					<div class="fl">
+						<span class="num">00</span>
+						<span class="dot">:</span>
+						<span class="num">00</span>
+						<span class="dot">:</span>
+						<span class="num">00</span>
+					</div>
+				</div>
+				<div class="tit_right fr">
+					<span>京选好货轮番秒</span>
+					<i class="forward"></i>
+				</div>
+			</div>
+			<div class="ms_content">
+				<ul>
+					<li><img src="image/ms1.jpg" alt=""><span class="newPrice"><em>￥</em>1099</span><span class="oldPrice"><em>￥</em>1099</span></li>
+					<li><img src="image/ms2.jpg" alt=""><span class="newPrice"><em>￥</em>1099</span><span class="oldPrice"><em>￥</em>1099</span></li>
+					<li><img src="image/ms3.jpg" alt=""><span class="newPrice"><em>￥</em>1099</span><span class="oldPrice"><em>￥</em>1099</span></li>
+					<li><img src="image/ms4.jpg" alt=""><span class="newPrice"><em>￥</em>1099</span><span class="oldPrice"><em>￥</em>1099</span></li>
+				</ul>
+
+			</div>
+	   </div>
+	    <!--游戏广告-->
+		<div class="ad_game">
+			<img class="left fl" src="image/left.jpg" alt="">
+			<img class="mid fl" src="image/mid.jpg" alt="">
+			<img class="right fl" src="image/right.jpg" alt="">
+		</div>
+	    <!--发现好货-->
+		<div class="findgood">
+			<div class="big">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/kt.jpg" alt="">
+			</div>
+			<div class="small">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/ms.jpg" alt="">
+			</div>
+			<div class="small">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/ms.jpg" alt="">
+			</div>
+		</div>
+	    <!--品质生活-->
+	    <div class="lovelife">
+		<div class="tit_img">
+			<img class="t_img" src="image/floor-tit.png" alt="">
+			<span class="t_img1"><img class="t_img2" src="image/love.jpg" alt=""></span>
+		</div>
+		<div class="life_big">
+			<div class="big">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/kt.jpg" alt="">
+			</div>
+			<div class="big">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/kt.jpg" alt="">
+			</div>
+			<div class="big">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/kt.jpg" alt="">
+			</div>
+			<div class="big">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/kt.jpg" alt="">
+			</div>
+		</div>
+		<div class="life_small">
+			<div class="small">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/ms.jpg" alt="">
+			</div>
+			<div class="small">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/ms.jpg" alt="">
+			</div>
+			<div class="small">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/ms.jpg" alt="">
+			</div>
+			<div class="small">
+				<span class="g_title">发现好货</span>
+				<span class="g_content">发现品质生活</span>
+				<img src="image/ms.jpg" alt="">
+			</div>
+		</div>
+	</div>
+		<!--底部导航区域-->
+        <footer>
+			<ul>
+				<li><a href="index.html"><img src="image/a-recommend.png"/></a></li>
+				<li><a href="category.html"><img src="image/n-catergry.png"/></a></li>
+				<li><a href=""><img src="image/n-find.png"/></a></li>
+				<li><a href="cart.html"><img src="image/n-cart.png"/></a></li>
+				<li><a href=""><img src="image/n-me.png"/></a></li>
+			</ul>
+        </footer>
+</div>
+	  
+</body>
+</html>
